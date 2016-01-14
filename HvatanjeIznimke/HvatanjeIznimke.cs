@@ -9,7 +9,7 @@ namespace Vsite.CSharp
 
         static int faktorjel(int broj)
         {
-            // TODO: Dodati u metodu provjeru je li argument manji od 0 i u tom sluèaju baciti iznimku tipa ArgumentOutOfRangeException s odogovarajuæom porukom
+            // Dodati u metodu provjeru je li argument manji od 0 i u tom sluèaju baciti iznimku tipa ArgumentOutOfRangeException s odogovarajuæom porukom
 
 
             int rezultat = 1;
@@ -20,9 +20,9 @@ namespace Vsite.CSharp
 
         static void Main(string[] args)
         {
-            // TODO: Provjeriti koju iznimku æe baciti metoda faktorjel u donjoj petlji te na osnovu toga...
-            // TODO: Donje petlje obuhvatiti try-catch blokom koji æe prekinuti daljnje raèunanje kada bude baèena iznimka
-
+            // Provjeriti koju iznimku æe baciti metoda faktorjel u donjoj petlji te na osnovu toga...
+            // Donje petlje obuhvatiti try-catch blokom koji æe prekinuti daljnje raèunanje kada bude baèena iznimka
+            try 
             {
                 for (int n = 1; n < 20; ++n)
                 {
@@ -33,8 +33,13 @@ namespace Vsite.CSharp
                     }
                 }
             }
+            catch (OverflowException e)
+                {
 
-
+                Console.WriteLine(e.Message);
+                }
+            
+    
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey();
         }

@@ -11,14 +11,24 @@ namespace Vsite.CSharp
 
             for (int i = 0; i < djeljitelji.Length; ++i)
             {
-                // TODO: Donje naredbu umetnuti u try-blok te dodati catch i finally blokove. Dodati kontrolne ispise u svaki od tih blokova te provjeriti što æe se ispisati. Ispisi prekopirati u "TijekIzvodjenja.txt"
+                // Donje naredbu umetnuti u try-blok te dodati catch i finally blokove. Dodati kontrolne ispise u svaki od tih blokova te provjeriti što æe se ispisati. Ispisi prekopirati u "TijekIzvodjenja.txt"
+                try
+                {
+                    Console.WriteLine("Dijelim s {0}", djeljitelji[i]);
+                    Console.WriteLine(3 / djeljitelji[i]);
+                    Console.WriteLine("Podijelio sam s {0}", djeljitelji[i]);
 
-                Console.WriteLine("Dijelim s {0}", djeljitelji[i]);
-                Console.WriteLine(3 / djeljitelji[i]);
-                Console.WriteLine("Podijelio sam s {0}", djeljitelji[i]);
+                }
 
+                catch
+                {
+                    Console.WriteLine("Iznimka uhvaæema");
+                }
 
-
+                finally
+                {
+                    Console.WriteLine("Finale");
+                }
 
                 Console.WriteLine();
             }

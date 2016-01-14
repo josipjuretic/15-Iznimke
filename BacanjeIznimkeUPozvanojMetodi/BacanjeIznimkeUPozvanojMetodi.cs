@@ -36,10 +36,10 @@ namespace Vsite.CSharp
             {
                 Console.WriteLine("catch(ArgumentException) u Metoda1");
             }
-            // TODO: Kako bi izgledalo izvoðenje programa kada bi se izostavio donji blok hvatanja? Zakomenirajte ga i pokrenite program. 
+            // Kako bi izgledalo izvoðenje programa kada bi se izostavio donji blok hvatanja? Zakomenirajte ga i pokrenite program. 
             catch (DivideByZeroException)
             {
-                Console.WriteLine("catch(DivideByZeroException) u Metoda1");
+              Console.WriteLine("catch(DivideByZeroException) u Metoda1");
             }
             finally
             {

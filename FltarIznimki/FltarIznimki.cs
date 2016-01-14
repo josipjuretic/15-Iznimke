@@ -18,7 +18,19 @@ namespace Vsite.CSharp
                 {
                     throw iznimke[i];
                 }
-                // TODO: Složiti filtere iznimki tipa Exception, ArgumentOutOfRangeException i ArgumentException te provjeriti koja æe iznimka biti uhvaæena u kojem bloku.
+                // Složiti filtere iznimki tipa Exception, ArgumentOutOfRangeException i ArgumentException te provjeriti koja æe iznimka biti uhvaæena u kojem bloku.
+                catch (ArgumentOutOfRangeException e)
+                {
+                    Console.WriteLine("Exception");
+                    Console.WriteLine(e);
+                    Console.WriteLine();
+                }
+                catch (ArgumentException e)
+                {
+                    Console.WriteLine("Exception");
+                    Console.WriteLine(e);
+                    Console.WriteLine();
+                }
                 catch (Exception e)
                 {
                     Console.WriteLine("Exception");
